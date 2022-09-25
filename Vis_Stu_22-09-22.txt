@@ -1,0 +1,54 @@
+
+
+												Visual Studio Tools and FrameWorks
+
+>NUnit test Project
+	*Used to define and run unit tests
+			1.maintain code health
+			2.ensure code coverage
+			3.find errors and faults before your customers do.
+	*Run your unit tests frequently to make sure your code is working properly.
+
+>ASP.NET Core MVC
+	*Rich Framework
+	*Used to build Wep Apps and APIs using the MVC design pattern
+	*MVC-Model-View-Controller
+	*Separates application into 3 main groups.
+		1.Model
+		2.View
+		3.Controller
+	#Controller
+		*Controller is Responsible for working with Model to perform user and/or retrieve result queries.
+		*Controller chooses the View to display to the user and provides it with any Model data it requires.
+	#View
+		*Views are responsible for presenting content through the user interface.
+	#Model
+		*Represents the state of the application and any business logic or operations that should be performed by it.
+		(The state of an algorithm at a given point in its execution is the collection of values of all variables contained in the algorithm at that point.)
+		(Business logic is the custom rules or algorithms that handle the exchange of information between a database and user interface.)
+
+
+
+>Solution Explorer
+	*Used to create & manage your solutions and projects and to view & interact with your code.
+	*Git Changes used to collaborate on code, projects with your team.
+
+>Nuget Package Manager
+	*Allows you to easily install, uninstall, and update NuGet packages in projects and solutions.
+	*You can search and add packages to your .NET Core, ASP.NET Core, and Xamarin projects.
+
+>Build:
+	*Clean Solution - deletes all compiled files (all dll’s and exe’s ).
+	*Build Solution - compiles code files (dll and exe) that have changed.
+	*Rebuild Solution - Deletes all compiled files and Compiles them again regardless of whether or not the code has changed.
+
+>Debug:
+	*Debugging is the process of finding errors during application execution. (f5)
+		It does not mean syntax errors, with which the application cannot be compiled, but on logic errors. 
+		Logic errors can only be noticed during application execution.
+	*Breakpoints are a useful feature when you know the line or section of code that you want to examine in detail.
+	*Step Into:Logic errors can only be noticed during application execution.
+	*Step over:is used for debugging the test steps line by line, but when the procedure is called the entire procedure call
+		will be executed as single step. The cursor never gets inside the procedure.
+
+ 
