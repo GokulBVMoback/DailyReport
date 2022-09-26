@@ -1,0 +1,26 @@
+
+													Visual Studio
+
+
+>.Net Framework
+	.Net Framework is a software development platform developed by Microsoft for building and running Windows applications
+		1.Certain components of the .Net Framework are open source
+		2.compatible with the windows operating system. Although, it was developed to support software and applications on all operating systems.
+		3.Security:-Code access security feature is present in .NET Framework.
+
+							vs
+>.Net Core
+	.NET Core is a new version of .NET Framework
+		1.Open Source
+		2.Cross platform:-It is compatible with various operating systems — Windows, Linux, and Mac OS as it is cross-platform.
+		3.Security:-.NET Core does not have features like Code Access Security.
+>Debug Mode vs Release Mode
+	*Debug and Release are different configurations for building your project. 
+	*As the name implies, you generally use the Debug mode for debugging your project, and the Release mode for the final build for end users. 
+	*The Debug mode does not optimize the binary it produces (as optimizations can greatly complicate debugging), and generates additional data to aid debugging. 
+	*The Release mode enables optimizations and generates less (or no) extra debug data.
+
+						Debug Mode						Release Mode
+#Priority of build mode			*When we are developing the application.        *When we are going to production mode or deploying the application to the server.
+#Code Optimization			*The debug mode code is not optimized.		*The release mode code is optimized.
+#Performance				*In debug mode the application will be slow.	*In release mode the application will be faster.
