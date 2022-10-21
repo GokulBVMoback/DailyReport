@@ -1,0 +1,64 @@
+20/10/2022
+-------------SQL JOINs-----------------
+*A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+----Syntax:
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+----eg:
+SELECT table_name.column1, table_name2.column1, table_name.column2
+FROM tale_name
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+-----Types of SQL JOINs:
+*INNER JOIN
+*LEFT JOIN
+*RIGHT JOIN
+*FULL JOIN
+
+--------INNER JOIN(Inner)--------
+*Returns records that have matching values in both tables.
+----Syntax:
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+----eg:
+*Here we join three tables(Student, StudentDet, StudentMark)
+*And select Id, Name columns from Student table,
+*select Address, Blood_Group columns from StudentDet table,
+*And select Tamil, Engkish, Maths, Computer_Science, Physics, Chemistry columns from StudentMark table.
+*To Display.
+
+SELECT Student.Id, Student.Name, StudentDet.Address, StudentDet.Blood_Group, StudentMark.Tamil,StudentMark.English,StudentMark.Maths,StudentMark.Computer_Science,StudentMark.Physics,StudentMark.Chemistry
+FROM ((Student
+INNER JOIN StudentDet ON Student.ID = StudentDet.ID)
+INNER JOIN StudentMark ON Student.ID = StudentMark.ID);
+
+--------LEFT JOIN(Outer)---------
+*Returns all records from the left table, and the matched records from the right table.
+----Syntax:
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+
+--------RIGHT JOIN(Outer)--------
+*Returns all records from the right table, and the matched records from the left table.
+----Syntax:
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+
+--------FULL JOIN(Outer) or FULL OUTER JOIN---------
+*Returns all records when there is a match in either left or right table.
+*FULL OUTER JOIN and FULL JOIN are the same.
+----Syntax:
+SELECT column_name(s)
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name;

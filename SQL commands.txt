@@ -1,0 +1,59 @@
+------------------SQL_Commands------------------
+*CREATE DATABASE	- is used to create a new SQL database.
+		_____Syntax_____
+		CREATE DATABASE databasename;
+
+*Create Table	-is used to create a new table.
+		_____Syntax_____
+		CREATE TABLE table_name (
+		column1 datatype,
+		column2 datatype,
+		column3 datatype,
+		....
+		);
+		_____Eg;_____
+		CREATE TABLE Student(
+		Id int,
+		Name varchar(20),
+		Tamil tinyint,
+		English tinyint,
+		Maths tinyint,
+		Computer_Science tinyint,
+		Physics tinyint,
+		Chemistry tinyint)
+
+*ALTER TABLE	- is used to add, delete, or modify columns in an existing table.
+			- is also used to add and drop various constraints on an existing table.
+		_____Syntax_____
+		i)-----Adding column-----
+		ALTER TABLE table_name
+		ADD column_name datatype;
+
+		ii)-----Adding column-----
+		ALTER TABLE table_name
+		DROP COLUMN column_name;
+
+		iii)-----Altering column-----
+		ALTER TABLE table_name
+		ALTER COLUMN column_name datatype;
+
+----------------SQL Constraints----------------
+	- are used to specify rules for the data in a table.
+	- Constraints can be specified when the table is created with the CREATE TABLE statement,
+	- or after the table is created with the ALTER TABLE statement.
+			_____Syntax_____
+		CREATE TABLE table_name (
+    		column1 datatype constraint,
+    		column2 datatype constraint,
+    		column3 datatype constraint,
+    		....
+		);
+	- following constraints are commonly used in SQL:
+
+		NOT NULL - Ensures that a column cannot have a NULL value
+		UNIQUE - Ensures that all values in a column are different
+		PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+		FOREIGN KEY - Prevents actions that would destroy links between tables
+		CHECK - Ensures that the values in a column satisfies a specific condition
+		DEFAULT - Sets a default value for a column if no value is specified
+		CREATE INDEX - Used to create and retrieve data from the database very quickly
