@@ -1,0 +1,37 @@
+------Web API Tutorial:-------
+	---Topics---
+	1.Web API
+	2.ASP.NET Web API
+	3.Features of C# Web API(Characteristics)
+	4.Version of C# Web API
+	5.C# Web API VS c# WCF
+	6.Benefits of C# Web API
+	7.When to choose C# Web API
+
+----Web API----
+	- is a set of Subroutine definitions, protocols and tools
+	- for developing software applications in computer programming.
+	- is a type of interface with a set of functions.
+	- that allow programmers to access secific features or data of an application, OS, or other Services.
+	- It is Web based.
+	- accessed via the HTTP protocol.
+	- is a concept rather than a technology.
+	- we can create Web API using various technologies ie, Java, .NET, etc.,
+	- for eg Twitters REST API provide programmatic access to read and write data,
+	- allows us to integrate twitters capabilities into our application.
+
+----ASP.NET Web API----
+	- is extensible framework for creating HTTP-based services.
+	- that can be accessed in various applications on various platforms ie, web, windows, mobile etc.,
+	- similarly to an ASP.NET MVC, except it sends data as response instead of HTML view.
+	-similarly to web service or WCF service, exceept it only supports the HTTP protocol.
+
+----ASP.NET Web API Characteristics----
+	- ASP.NET Web API platform is ideal for developing RESTful services.
+	- based on ASP.NET.
+	- supports ASP.NET request/response pipeline.
+	- HTTP verbs are translated into method names by ASP.NET Web API.
+	- supports variety of response data formats ie, JSON, XML and BSON. It is built-in.
+	- IIS, Self-Hosted or any other web server that supports .NET 4.0 or higher can host ASP.NET Web API.
+	- We can communicate with Web API by "new HTTP Client".
+	- "HTTP Client" can be used on server-side of ASP, MVC, Windows Form applications, Console applications and other apps.

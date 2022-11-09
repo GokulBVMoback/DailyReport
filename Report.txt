@@ -55,10 +55,82 @@ RIGHT JOIN table2
 ON table1.column_name = table2.column_name;
 
 --------FULL JOIN(Outer) or FULL OUTER JOIN---------
-*Returns all records when there is a match in either left or right table.
 *FULL OUTER JOIN and FULL JOIN are the same.
+*Returns all records when there is a match in either left or right table.
 ----Syntax:
 SELECT column_name(s)
 FROM table1
 FULL OUTER JOIN table2
 ON table1.column_name = table2.column_name;
+
+28/10/2022
+---------
+-------------------SQL Injection-------------------
+
+*SQL injection is a code injection technique that might destroy your database.
+		- is one of the most common web hacking techniques.
+		- is the placement of malicious code in SQL statements, via web page input.
+		- usually occurs when you ask a user for input, like their username/userid,
+		- and instead of a name/id, the user gives you an SQL statement that you will unknowingly run on your database.
+
+
+31/10/2022
+-----------
+
+------------------Indexes------------------
+
+	*The goal of the index is to make the search operation faster.
+	*Indexes make the search operation faster by creating something called a B-Tree (Balanced Tree) structure internally.
+	*In a table, we can use a maximum of 250 indexes.
+
+----------Database engine wants to retrieve the data from a database table
+	Two different mechanisms for searching the data
+
+		1.Table scan
+		2.Index Scan/Seek
+
+	---Table Scan---
+	-one by one from the start to the last record of the table.
+	-If the table having more rows.
+	-then it will take more time for searching.
+
+	---Index Scan/Seek---
+	-uses a B-Tree structure to search the required data.
+	- B-Tree structure drastically improves the performance of your search query by reducing the number of scans.
+	
+	--Process--
+	-Whenever you create an index (or indexes) on some column(s) of a table in SQL Server then what happens internally is, it creates a B-Tree structure. 
+	-In the B-Tree structure, the data is divided into three sections i.e. Root Node, Non-Leaf Nodes, and Leaf Nodes. 
+	-As you can see, in the Root Node it has 30 and 50. 
+	-In the Non-Leaf node, it has 10, 30, 40, and 50. And in the leaf node, we have the actual data. 
+	-So, the leaf node is actually pointing to data.
+
+	-When we create an index on any column of a table, 
+	-then SQL Server internally maintains a separate table called index table. 
+	-when we are trying to retrieve the data from the existing table, depends on the index table, 
+	-SQL Server directly goes to the table and retrieves the data very quickly.
+
+	---Two types of Index---
+
+		1.Clustered index
+		2.Non-clustered index
+
+	--Clustered Index---
+	-defines the order in which the data is physically stored in a table.
+	-As the leaf nodes store the actual data a table can have only one clustered index.
+	-(if there is no clustered index already exists) The Clustered Index by default was created when we created the primary key constraint for that table.
+	-That means the primary key column creates a clustered index by default.
+	-When a table has a clustered index then the table is called a clustered table.
+	-It is not possible to create more than one clustered index in a table in SQL Server.
+	-It is possible in SQL Server to create the clustered index with multiple columns.
+	-it is called a composite clustered index.
+
+	--Non-clustered index--
+	-the arrangement of data in the index table will be different from the arrangement of data in the actual table.
+	-The data is stored in one place and the index is stored in another place. 
+	-Moreover, the index will have pointers to the storage location of the actual data.
+	-If a table has no clustered index, its data rows are stored in an unordered structure.
+
+	--Unique Index--
+	-The Unique Index by default was created when we created the unique key constraint for that table.
+	-we can also create.
